@@ -6,24 +6,22 @@
     <display-name>shiro_exec</display-name>
 
     <!-- 添加Spring容器监听器，加载spring容器，将mapper、service、controller加载到spring容器中 -->
-<!--    <context-param>
+    <context-param>
         <param-name>contextConfigLocation</param-name>
         <param-value>classpath:config/spring/applicationContext-*</param-value>
-    </context-param>-->
+    </context-param>
 
     <!-- 防止发生java.beans.Introspector内存泄露,应将它配置在ContextLoaderListener的前面 -->
-    <!-- 详细描述见http://blog.csdn.net/jadyer/article/details/11991457 -->
-<!--    <listener>
+     详细描述见http://blog.csdn.net/jadyer/article/details/11991457
+    <listener>
         <listener-class>org.springframework.web.util.IntrospectorCleanupListener</listener-class>
-    </listener>-->
+    </listener>
 
     <!-- 实例化Spring容器 -->
     <!-- 应用启动时,该监听器被执行,它会读取Spring相关配置文件,其默认会到WEB-INF中查找applicationContext.xml -->
-<!--    <listener>
+    <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
-    </listener>-->
-
-
+    </listener>
     <!-- 配置前端控制器 -->
     <servlet>
         <servlet-name>springmvc</servlet-name>
